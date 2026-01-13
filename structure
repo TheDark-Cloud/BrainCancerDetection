@@ -1,0 +1,52 @@
+brain-cancer-detection/
+│
+├── README.md                # Project overview, dataset info, setup instructions
+├── requirements.txt         # Python dependencies (tensorflow, opencv, scikit-learn, etc.)
+├── config.yaml              # Config file for hyperparameters, paths, training settings
+│
+├── data/
+│   ├── raw/                 # Original MRI scans (train/test images)
+│   ├── processed/           # Preprocessed images (resized, normalized)
+│   ├── annotations/         # Labels (CSV/JSON with tumor vs non-tumor)
+│   └── splits/              # Train/validation/test split files
+│
+├── notebooks/
+│   ├── 01_EDA.ipynb         # Exploratory Data Analysis (visualize MRI scans, class balance)
+│   ├── 02_preprocessing.ipynb # Image cleaning, augmentation experiments
+│   └── 03_model_prototyping.ipynb # Quick CNN/transfer learning experiments
+│
+├── src/
+│   ├── data_loader.py       # Functions to load and preprocess MRI images
+│   ├── augmentations.py     # Image augmentation (rotation, flipping, etc.)
+│   ├── models/
+│   │   ├── cnn.py           # Custom CNN architecture
+│   │   └── transfer_learning.py # ResNet/EfficientNet fine-tuning
+│   ├── train.py             # Training loop, logging, checkpoints
+│   ├── evaluate.py          # Model evaluation (accuracy, ROC-AUC, confusion matrix)
+│   └── predict.py           # Inference script (load model, predict on new MRI)
+│
+├── utils/
+│   ├── metrics.py           # Precision, recall, F1-score, ROC curve
+│   ├── visualization.py     # Plot training curves, Grad-CAM heatmaps
+│   └── logger.py            # Logging (TensorBoard or custom)
+│
+├── models/
+│   ├── checkpoints/         # Saved weights during training
+│   └── final_model.h5       # Best trained model
+│
+├── app/
+│   ├── api.py               # Flask/FastAPI endpoint for predictions
+│   ├── templates/           # HTML frontend (optional)
+│   └── static/              # CSS/JS files for frontend
+│
+├── tests/
+│   ├── test_data_loader.py  # Unit tests for data pipeline
+│   ├── test_model.py        # Unit tests for model inference
+│   └── test_api.py          # Unit tests for API endpoints
+│
+├── docs/
+│   ├── architecture.png     # Diagram of your ML pipeline
+│   ├── workflow.md          # Step-by-step explanation of workflow
+│   └── results.md           # Model performance, confusion matrix, ROC curve
+│
+└── dockerfile               # Containerization for deployment
