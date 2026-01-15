@@ -1,0 +1,15 @@
+#General Project Setting
+project_name: BrainCancerDetection
+random_seed: 42
+
+# Data setting
+data:
+    raw: "data/raw"
+    split_dir: "data/split"
+
+
+# Image preprocessing
+image:
+    image_size: [224, 224]
+    batch_size: 32
+    normalize: True
