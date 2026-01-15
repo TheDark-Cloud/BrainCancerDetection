@@ -10,6 +10,6 @@ data:
 
 # Image preprocessing
 image:
-    image_size: [224, 224]
+    image_size: [128, 128]
     batch_size: 32
     normalize: True
