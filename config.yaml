@@ -4,12 +4,12 @@ random_seed: 42
 
 # Data setting
 data:
-    raw: "data/raw"
-    split_dir: "data/split"
+    raw_data: C:\Users\Tony\PycharmProjects\BrainCancerDetection\data\raw
+    split_data: C:\Users\Tony\PycharmProjects\BrainCancerDetection\data\split
 
 
 # Image preprocessing
 image:
-    image_size: [128, 128]
+    image_size: [224, 224]
     batch_size: 32
     normalize: True

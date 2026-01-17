@@ -1,8 +1,9 @@
 import os, glob, shutil
 from sklearn.model_selection import train_test_split
+from src.data_loader import cfg
 
-raw_data = r"C:\Users\Tony\PycharmProjects\BrainCancerDetection\data\raw"
-output = r"C:\Users\Tony\PycharmProjects\BrainCancerDetection\data\split"
+raw_data = cfg['data']['raw_data']
+output = cfg['data']['split_data']
 
 classes = os.listdir(raw_data)
 for class_name in classes:
